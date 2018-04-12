@@ -9,7 +9,7 @@
 INDEX="_index"
 # search all file
 function readFile(){
-  FILES=`find -L $SRC -type f -name $INDEX`
+  FILES=`find -L $SRC -type f -name $INDEX ! -path "$SRC/$TGT*"`
   for FILE in $FILES
   do
     echo $FILE
